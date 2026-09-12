@@ -1,0 +1,36 @@
+server:
+  port: 8081
+  servlet:
+    # 统一接口前缀，对应原 /api/v1
+    context-path: /api/v1
+
+spring:
+  application:
+    name: campus-assistant
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/campus_assistant?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: "dr37060222"
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      database: 0
+      timeout: 3s
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    banner: false
+    db-config:
+      id-type: auto
+
+# 大模型（预留，后续在 service.rag.LlmClient 实现中读取）
+campus:
+  llm:
+    api-base: https://api.deepseek.com/v1
+    api-key:
+    model: deepseek-chat

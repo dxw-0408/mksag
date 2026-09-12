@@ -1,0 +1,26 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+.idea/
+*.iml
+*.class
+*.log
+.DS_Store
+
+# 忽略构建工具生成的其他产物 
+node_modules/
+dist/
+
+# 忽略更全面的 IDEA 目录
+*.ipr
+*.iws
+out/
+
+# 忽略 VS Code 配置 
+.vscode/
+
+# 忽略 Maven 编译生成的依赖目录
+.mvn/
+
+# 忽略系统生成的临时文件
+*.tmp
+*.bak
